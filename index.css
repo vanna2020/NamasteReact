@@ -1,11 +1,23 @@
 .header{
     display: flex;
-    border: 1px solid;
+    border: 1px solid ;
+    border-color:#308898c4 ;
+    border-radius: 2px;
+    background-color: #c1d7dcc4;
     justify-content: space-between;
+    height: 80px;
 }
 
 .logo{
-    width: 100px;
+    /* border: 1px solid; */
+    border-radius: 2px;
+    background-color: #308898c4;
+    width: 80px;
+}
+
+.nav-items{
+    display: flex;
+
 }
 
 .nav-items > ul {
@@ -22,25 +34,30 @@
 .res-cart{
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid;
 }
 
 .res-container{
     display: flex;
-    margin: 10px;
-    /* border: 1px solid; */
+    margin: 12px;
 }
 
 .cart{
-    margin: 10px;
-   cursor: pointer;
-   background-color:gainsboro;
+    display: flex;
+    flex-direction: column;
+    flex: wrap;
+    margin: 6px;
+    cursor: pointer;
+    background-color: #9cc8d0c4;
+    border-radius: 5px;
     height: 300px;
+    width: 205px;
+    padding: 3px;
 }
 
 .cart :hover
 {
     border: 1px solid;
+    border-color: aquamarine;
 }
 
 .food-image{
@@ -52,12 +69,73 @@
 .name{
     font-size: 12px;
     text-align: center;
-    text-overflow: hidden;
+    margin: 2px;
+    
+}
+
+.name1{
+    font-display: flex;
+    flex: wrap;
+    text-align: center;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 5px;
     margin: 5px;
-    flex-wrap: wrap;
     
 }
 
 .footer{
     border: 1px solid;
+}
+
+.filter{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    background-color: #9cc8d0c4;
+    justify-content: space-between;
+    border: 1px ;
+    padding: 10px;
+}
+
+.strips{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.strips1{
+    border: 1px solid;
+    border-color: azure;
+}
+
+.login{
+    margin-top: 25px;
+    margin-right: 5px;
+    border: 1px;
+    border-radius: 2px;
+    background-color: #3088987d;
+    font-family: 'Times New Roman', Times, serif;
+    width: 50px;
+    height: 30px;
+}
+
+.button-search{
+    width: 50px;
+    height: 22px;
+    border: 1px;
+    border-radius: 2px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #3088987d;
+}
+
+.filter-search{
+    width: 190px;
+    height: 24px;
+    border: 1px;
+    border-radius: 2px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #3088987d;
 }
