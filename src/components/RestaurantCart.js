@@ -1,7 +1,7 @@
 import { CDN_URL } from "../utils/constant";
 
 const RestaurantCart = ({ resData }) => {
-  console.log("resData?.info",resData);
+  console.log("resData?.info", resData);
     const {
         cloudinaryImageId,
         name,
@@ -15,8 +15,6 @@ const RestaurantCart = ({ resData }) => {
       return (
         <div className="res-container">
           <div className="cart">
-            {/* <img className ="food-image"  alt="res-logo"  src="https://images.pexels.com/photos/1603901/pexels-photo-1603901.jpeg?auto=compress&cs=tinysrgb&w=600"></img> */}
-            {/* {it is the URL where Images are hosted} */}
             <img
               className="food-image"
               alt="res-logo"

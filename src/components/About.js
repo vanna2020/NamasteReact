@@ -7,7 +7,7 @@ const About = () => {
     <div className="body">
       {/* <h3>About Page</h3>
       <h3>About Page</h3> */}
-      <User name={"vandana Singh"} age={25} />
+      {/* <User name={"vandan Singh1"} age={25} /> */}
       <UserClass name={"Smita Singh"} age={26} />
     </div>
     
