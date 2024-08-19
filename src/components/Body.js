@@ -5,7 +5,7 @@ import useRestaurantMenu from "../utils/useRestaurantMenu";
 import { Link } from "react-router-dom";
 
 const Body = () => {
-  // const [listRestaurant, setListRestaturant] = useState([]);
+  const [listRestaurant, setListRestaturant] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
 
@@ -13,7 +13,7 @@ const Body = () => {
     fetchData();
   }, []);
 
-  const listRestaurant = useRestaurantMenu();
+  // const listRestaurant = useRestaurantMenu();
 
   const RestaurantCardPromoted = Addinglabel(RestaurantCart);
   console.log(filteredRestaurant);
@@ -23,6 +23,7 @@ const Body = () => {
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.3917085&lng=81.8707618&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
+    console.log(data)
 
     console.log(
       "json",
@@ -31,6 +32,9 @@ const Body = () => {
     setFilteredRestaurant(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
+    setListRestaturant(
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+  );
   };
   console.log("12323", listRestaurant);
   return listRestaurant?.length === 0 ? (

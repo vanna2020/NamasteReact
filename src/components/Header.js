@@ -4,14 +4,15 @@ import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
 import { useContext } from "react";
+import { useSelector } from "react-redux";
 
 const Header = () => {
 
 const [filterButton, setFilterButton] = useState("login")
-
 const onlineStatus = useOnlineStatus();
 const {loggedInUser} = useContext(UserContext)
-console.log(loggedInUser)
+const cartItems = useSelector((store)=> store.cart.items)
+
 
     return (
       <div className="header">
@@ -44,7 +45,9 @@ console.log(loggedInUser)
             <li>
               Contact Us
               </li>
-            <li>Cart</li>
+              <Link to="/cart">
+            <li className="font-bold px-4">Cart ({cartItems.length})</li>
+            </Link>
             <li className="font-bold">{loggedInUser}</li>
           </ul>
           <button className="login"
