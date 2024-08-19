@@ -10,8 +10,6 @@ const RestaurantCart = ({ resData }) => {
         costForTwo
     } = resData?.info;
 
-    console.log("resData?.info",resData?.info);
-    
       return (
         <div className="res-container">
           <div className="cart">
@@ -26,10 +24,23 @@ const RestaurantCart = ({ resData }) => {
             <div className="name">{name}</div>
             <div className="name1">{cuisines.toString()}</div>
             <div className="name">{avgRating}starts</div>
-            {/* <div className="name">₹{costForTwo / 100}for two</div> */}
+            <div className="name">{costForTwo}</div>
           </div>
         </div>
       );
     };
+
+//---------Creating higher Order Component ---------------//
+
+   export const Addinglabel = (RestaurantCart) =>{
+      return (props) =>{
+        return(
+          <div>
+            <label>Veg</label>
+            <RestaurantCart {...props}/>
+          </div>
+        )
+      }
+    }
 
 export default RestaurantCart;

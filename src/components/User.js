@@ -22,13 +22,10 @@ const User = ({name, age}) =>{
     }
 
 
-  
-
     return(
         <div> 
             <h2>Count : {count}</h2>
             <h2>Count2 : {count2}</h2>
-            {/* <h2>Name : {data1.name}</h2> */}
             <h3>Age : {age}</h3>
         </div>
     )

@@ -2,12 +2,16 @@ import { LOGO_URL } from "../utils/constant";
 import React ,{ useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
+import { useContext } from "react";
 
 const Header = () => {
 
 const [filterButton, setFilterButton] = useState("login")
 
 const onlineStatus = useOnlineStatus();
+const {loggedInUser} = useContext(UserContext)
+console.log(loggedInUser)
 
     return (
       <div className="header">
@@ -41,6 +45,7 @@ const onlineStatus = useOnlineStatus();
               Contact Us
               </li>
             <li>Cart</li>
+            <li className="font-bold">{loggedInUser}</li>
           </ul>
           <button className="login"
           onClick={()=>{

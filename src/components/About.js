@@ -1,13 +1,16 @@
-import User from "./User";
+
+import UserContext from "../utils/UserContext";
 import UserClass from "./UserClass";
 
 const About = () => {
 
   return (
     <div className="body">
-      {/* <h3>About Page</h3>
-      <h3>About Page</h3> */}
-      {/* <User name={"vandan Singh1"} age={25} /> */}
+      <UserContext.Consumer>
+        {({loggedInUser})=>(
+          <h1 className="font-bold">{loggedInUser}</h1>
+        )}
+      </UserContext.Consumer>
       <UserClass name={"Smita Singh"} age={26} />
     </div>
     
